@@ -13,6 +13,7 @@
         "title": "delectus aut autem",
         "completed": false
     }]
+    console.log(arrayOfTodos[1].userId)
     
     const fetchTodos = () => {
         fetch('https://jsonplaceholder.typicode.com/todos')
@@ -25,10 +26,13 @@
     }
     
     const populateTodos = () => {
+        for(let i=0;i<arrayOfTodos.length;i++){
+
+        
         let ol = document.getElementById('todo-list')
         let li = document.createElement('li');
-        li.appendChild(document.createTextNode(''));
+        li.appendChild(document.createTextNode(arrayOfTodos[i].title));
         ol.appendChild(li);
+        }      
         
-        
-    }
+}
