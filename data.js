@@ -33,18 +33,23 @@
         ol.appendChild(li);
         }      
     }
-    var input = document.getElementById('banana')
+    
+    var input = document.getElementById('Input')
     console.log(input.value)
     function filterCallback (element) {
         // returns the elements by the "userId"
         return element.userId == input.value
     } 
+
+    function compTrue (value) {
+        return value.completed === "true"
+    }
     
     const filterTodos = () => {
         //clears the previous array
         document.getElementById('todo-list').innerHTML = ''
         //filters the value placed in input
-        let filteredArray = arrayOfTodos.filter(filterCallback)
+        let filteredArray = arrayOfTodos.filter(filterCallback);
         console.log(arrayOfTodos.filter(filterCallback))
         // display the filter in the document not the console.log
         for(let i=0;i<filteredArray.length;i++){
@@ -55,5 +60,14 @@
             ol.appendChild(li);
             }   
     }
-
+    
+       const clearTodos = () => {
+        
+        document.getElementById('todo-list').innerHTML = ''
+    }
+    const filterCompleted = () => {
+        
+         
+       
+    }
      
