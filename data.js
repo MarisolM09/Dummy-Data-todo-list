@@ -65,7 +65,7 @@
         
         document.getElementById('todo-list').innerHTML = ''
     }
-    const filterCompleted = () => {
+    
         
          
        
